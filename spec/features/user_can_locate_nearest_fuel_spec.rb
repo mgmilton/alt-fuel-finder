@@ -1,12 +1,12 @@
 require "rails_helper"
 
-featuer "User sees a list of nearest fuel stations" do
+feature "User sees a list of nearest fuel stations" do
   context "upon searching with a zip code" do
     it "returns a list of fuel stations" do
       VCR.use_cassette("user_sees_fuel", :record => :new_episodes) do
         visit "/"
 
-        fill_in "/search", with: 80203
+        fill_in "q", with: 80203
 
         click_on "Locate"
         expect(current_path).to eq("/search")
