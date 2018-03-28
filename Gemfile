@@ -13,8 +13,14 @@ gem 'faraday'
 gem 'figaro'
 
 group :development, :test do
-  gem 'byebug'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
+  gem 'launchy'
+  gem 'pry'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails', "~> 4.0"
+  gem 'simplecov'
 end
 
 group :development do
@@ -27,4 +33,3 @@ group :test do
   gem 'webmock'
   gem 'capybara'
 end
-
