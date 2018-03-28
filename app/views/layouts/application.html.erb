@@ -21,7 +21,11 @@
         <ul class="nav navbar-nav">
           <%= form_tag :search, method: :get, class: "form-inline" do %>
             <div class="form-group search-field">
-              <%= text_field_tag :q, "Search by zip...", class: "form-control" %>
+              <%= text_field_tag :location, "Search by zip...", class: "form-control" %>
+              <%= hidden_field_tag :api_key, ENV['NREL_API_KEY'] %>
+              <%= hidden_field_tag :fuel_type, "ELEC,LPG"%>
+              <%= hidden_field_tag :distance, "6"%>
+              <%= hidden_field_tag :limit, "10"%>
               <%= submit_tag "Locate", class: "btn btn-primary" %>
             </div>
           <% end %>
