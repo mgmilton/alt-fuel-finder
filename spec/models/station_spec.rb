@@ -2,9 +2,9 @@ require "rails_helper"
 
 describe Station do
   let(:attributes) {{
-    name: "UDR",
+    station_name: "UDR",
     street_address: "800 Acoma St",
-    fuel_type_codes: "ELEC",
+    fuel_type_code: "ELEC",
     distance: "0.31422",
     access_days_time: "24 hours daily" }}
 
