@@ -4,7 +4,7 @@ class Station
     @name = attributes[:name]
     @address = attributes[:address]
     @fuel_types = attributes[:fuel_types]
-    @distance = attribures[:distance]
+    @distance = attributes[:distance]
     @access_times = attributes[:access_times]
   end
 end
