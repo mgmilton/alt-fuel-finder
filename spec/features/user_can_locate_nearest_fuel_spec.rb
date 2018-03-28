@@ -7,6 +7,9 @@ feature "User sees a list of nearest fuel stations" do
         visit "/"
 
         fill_in "location", with: 80203
+        fill_in "fuel_type", with: "ELEC,LPG"
+        fill_in "distance", with: "6"
+        fill_in "limit", with: "10"
 
         click_on "Locate"
         expect(current_path).to eq("/search")
